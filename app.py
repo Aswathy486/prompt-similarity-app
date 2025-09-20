@@ -22,12 +22,18 @@ if st.button("Check Similarity"):
         score = util.cos_sim(emb1, emb2).item()
 
         # Points logic
-        if score >= 0.8:
+        if score >= 0.9:
             points = 10
+        elif score >= 0.8:
+            points = 8
         elif score >= 0.6:
-            points = 7
+            points = 6
+        elif score >= 0.8:
+            points = 10
         elif score >= 0.4:
-            points = 5
+            points = 4
+        elif score >= 0.2:
+            points = 2
         else:
             points = 0
 
